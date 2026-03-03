@@ -21,10 +21,12 @@ modules:
     repos:
       copr:
         - atim/starship
+      nonfree: rpmfusion
     install:
       packages:
         - micro
         - starship
+        - steam
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
