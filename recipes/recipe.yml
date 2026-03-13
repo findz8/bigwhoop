@@ -6,7 +6,7 @@ name: bigwhoop
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/kinoite-main
+base-image: ghcr.io/ublue-os/bazzite
 image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -20,13 +20,7 @@ modules:
   - type: dnf
     install:
       packages:
-        - steam
-        - gnome-disk-utility
-        - docker
-        - distrobox
         - headsetcontrol
-        - mangohud
-        - gamescope
         - rclone
     remove:
       packages:
@@ -34,9 +28,10 @@ modules:
         # "firefox" is the main package, "firefox-langpacks" is a dependency
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-        - plasma-discover
-        - toolbox
-
+        - Waydroid
+        - Sunshine
+        - Rom-Properties
+         
   - type: default-flatpaks
     configurations:
       - notify: true # Send notification after install/uninstall is finished (true/false)
@@ -55,16 +50,8 @@ modules:
           - org.freedesktop.Platform.ffmpeg-full
           - org.mozilla.firefox
           - com.ranfdev.DistroShelf
-          - org.gnome.Firmware
       - scope: user # Also add Flathub user repo, but no user packages
 
-  - type: brew
-    nofile-limits: true # increase nofile limits
-    brew-analytics: false # disable telemetry
-  - type: akmods
-    base: main # if not specified, classic "main" base is used by default
-       install:
-        - bazzite
   - type: systemd
     # this example disables automatic flatpak updates and enables a custom service unit for all users
     system:
