@@ -61,7 +61,9 @@ modules:
   - type: brew
     nofile-limits: true # increase nofile limits
     brew-analytics: false # disable telemetry
-      
+  - type: akmods
+    base: bazzite # if not specified, classic "main" base is used by default
+
   - type: systemd
     # this example disables automatic flatpak updates and enables a custom service unit for all users
     system:
