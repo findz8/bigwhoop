@@ -24,7 +24,7 @@ modules:
         - gnome-disk-utility
         - docker
         - distrobox
-        - nix
+        - headsetcontrol
         - mangohud
         - gamescope
         - rclone
@@ -57,6 +57,10 @@ modules:
           - com.ranfdev.DistroShelf
           - org.gnome.Firmware
       - scope: user # Also add Flathub user repo, but no user packages
+
+  - type: brew
+    nofile-limits: true # increase nofile limits
+    brew-analytics: false # disable telemetry
       
   - type: systemd
     # this example disables automatic flatpak updates and enables a custom service unit for all users
