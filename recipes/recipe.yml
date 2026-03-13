@@ -26,11 +26,11 @@ modules:
       packages:
         # example: removing firefox (in favor of the flatpak)
         # "firefox" is the main package, "firefox-langpacks" is a dependency
-        - firefox
-        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-        - Waydroid
+        #- firefox
+        #- firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+        - waydroid
         - Sunshine
-        - Rom-Properties
+        - rom-properties
          
   - type: default-flatpaks
     configurations:
@@ -49,13 +49,6 @@ modules:
           - com.visualstudio.code
           - org.freedesktop.Platform.ffmpeg-full
           - org.mozilla.firefox
-          - com.ranfdev.DistroShelf
       - scope: user # Also add Flathub user repo, but no user packages
-
-  - type: systemd
-    # this example disables automatic flatpak updates and enables a custom service unit for all users
-    system:
-      enabled:
-        - docker.service
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
