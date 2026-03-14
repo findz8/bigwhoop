@@ -36,12 +36,14 @@ modules:
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
         - plasma-discover
         - toolbox
-
+        
   - type: default-flatpaks
     configurations:
-      - notify: true
+      - notify: true # Send notification after install/uninstall is finished (true/false)
         scope: system
-        install:
+        # If no repo information is specified, Flathub will be used by default
+        install: # system flatpaks we want all users to have and not remove
+          - app.zen_browser.zen
           - com.discordapp.Discord
           - io.github.kolunmi.Bazaar
           - com.github.tchx84.Flatseal
@@ -54,12 +56,7 @@ modules:
           - org.mozilla.firefox
           - com.ranfdev.DistroShelf
           - org.gnome.Firmware
-          - org.gnome.Weather
-          - org.gnome.Calendar
-          - org.gnome.Evolution
-          - org.gnome.Loupe
-       - scope: user # Also add Flathub user repo, but no user packages
-
+      - scope: user # Also add Flathub user repo, but no user packages
   - type: brew
     nofile-limits: true # increase nofile limits
     brew-analytics: false # disable telemetry
