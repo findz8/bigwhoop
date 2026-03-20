@@ -11,11 +11,11 @@ image-version: 42 # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - from-file: recipes/files.yml
-  - from-file: recipes/boring-packages.yml
-  - from-file: recipes/gnome-flatpaks.yml
-  - from-file: recipes/gnome-extensions.yml
-  - from-file: recipes/gschema-overrides.yml
+  - from-file: yamls/files.yml
+  - from-file: yamls/boring-packages.yml
+  - from-file: yamls/gnome-flatpaks.yml
+  - from-file: yamls/gnome-extensions.yml
+  - from-file: yamls/gschema-overrides.yml
  
   - type: default-flatpaks
     configurations:
