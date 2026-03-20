@@ -20,6 +20,9 @@ modules:
     install:
       packages:
         - steam
+        - lutris
+        - gamescope
+        - mangohud
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
@@ -29,7 +32,7 @@ modules:
         - toolbox
         - htop
         - nvtop
-        
+
   - type: default-flatpaks
     configurations:
       - notify: true # Send notification after install/uninstall is finished (true/false)
@@ -43,7 +46,6 @@ modules:
           - org.mozilla.firefox
           - com.discordapp.Discord
           - com.heroicgameslauncher.hgl
-          - net.lutris.Lutris
           - com.usebottles.bottles
           - com.visualstudio.code
 
