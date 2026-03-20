@@ -29,6 +29,31 @@ modules:
         - toolbox
         - htop
         - nvtop
+        
+  - type: default-flatpaks
+    configurations:
+      - notify: true # Send notification after install/uninstall is finished (true/false)
+        scope: system
+        # If no repo information is specified, Flathub will be used by default
+        install: # system flatpaks we want all users to have and not remove
+          - org.gnome.baobab
+          - org.mozilla.firefox
+      - scope: user # Also add Flathub user repo, but no user packages
+        install:
+          - org.mozilla.firefox
+          - com.discordapp.Discord
+          - com.heroicgameslauncher.hgl
+          - net.lutris.Lutris
+          - com.usebottles.bottles
+          - com.visualstudio.code
+
+  - type: gnome-extensions
+    install:
+      - Caffeine
+      - Blur my Shell 
+      - AppIndicator and KStatusNotifierItem Support
+      - Hot Edge
+      - Tiling Shell
 
   - type: os-release
     properties:
