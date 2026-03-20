@@ -1,6 +1,6 @@
-# bigwhoop &nbsp; [![bluebuild build badge](https://github.com/findz8/bigwhoop/actions/workflows/build.yml/badge.svg)](https://github.com/findz8/bigwhoop/actions/workflows/build.yml)
-# bigwhoop nvidia &nbsp; [![bluebuild build badge](https://github.com/findz8/bigwhoop/actions/workflows/build-nvidia.yml/badge.svg)](https://github.com/findz8/bigwhoop/actions/workflows/build-nvidia.yml)
-# bigwhoop nvidia &nbsp; [![bluebuild build badge](https://github.com/findz8/bigwhoop/actions/workflows/build-boring.yml/badge.svg)](https://github.com/findz8/bigwhoop/actions/workflows/build-boring.yml)
+# BigWhoop &nbsp; [![bluebuild build badge](https://github.com/findz8/bigwhoop/actions/workflows/build.yml/badge.svg)](https://github.com/findz8/bigwhoop/actions/workflows/build.yml)
+# BigWhoop nvidia &nbsp; [![bluebuild build badge](https://github.com/findz8/bigwhoop/actions/workflows/build-nvidia.yml/badge.svg)](https://github.com/findz8/bigwhoop/actions/workflows/build-nvidia.yml)
+# Boring-OS &nbsp; [![bluebuild build badge](https://github.com/findz8/bigwhoop/actions/workflows/build-boring.yml/badge.svg)](https://github.com/findz8/bigwhoop/actions/workflows/build-boring.yml)
 This is a custom image of Silverblue which also has a nvidia version which matches the main build
 
 ## Installation for AMD GPU
