@@ -1,5 +1,6 @@
 # bigwhoop &nbsp; [![bluebuild build badge](https://github.com/findz8/bigwhoop/actions/workflows/build.yml/badge.svg)](https://github.com/findz8/bigwhoop/actions/workflows/build.yml)
 # bigwhoop nvidia &nbsp; [![bluebuild build badge](https://github.com/findz8/bigwhoop/actions/workflows/build-nvidia.yml/badge.svg)](https://github.com/findz8/bigwhoop/actions/workflows/build-nvidia.yml)
+# bigwhoop nvidia &nbsp; [![bluebuild build badge](https://github.com/findz8/bigwhoop/actions/workflows/build-boring.yml/badge.svg)](https://github.com/findz8/bigwhoop/actions/workflows/build-boring.yml)
 This is a custom image of Silverblue which also has a nvidia version which matches the main build
 
 ## Installation for AMD GPU
@@ -46,6 +47,29 @@ To rebase an existing atomic Fedora installation to the latest build:
 - Then rebase to the signed image, like so:
   ```
   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/findz8/bigwhoop-nvidia:latest
+  ```
+- Reboot again to complete the installation
+  ```
+  systemctl reboot
+
+## Installation for boring OS (More my testing and boring laptop setup - no gaming)
+
+> [!WARNING]  
+> [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
+
+To rebase an existing atomic Fedora installation to the latest build:
+
+- First rebase to the unsigned image, to get the proper signing keys and policies installed:
+  ```
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/findz8/boring-os:latest
+  ```
+- Reboot to complete the rebase:
+  ```
+  systemctl reboot
+  ```
+- Then rebase to the signed image, like so:
+  ```
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/findz8/boring-os:latest
   ```
 - Reboot again to complete the installation
   ```
