@@ -29,6 +29,7 @@ modules:
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
         - toolbox
+        - gnome-software
 
   - type: default-flatpaks
     configurations:
@@ -47,6 +48,15 @@ modules:
           - org.gnome.Calculator
           - org.gnome.baobab
           - org.gnome.Evolution
+          - org.gnome.Snapshot
+          - org.gnome.Contacts
+          - org.gnome.clocks
+          - org.gnome.Sudoku
+          - org.gnome.Chess
+          - org.gnome.Logs
+          - org.gnome.Maps
+          - org.fedoraproject.MediaWriter
+          - io.missioncenter.MissionCenter
           - com.mattjakeman.ExtensionManager
       - scope: user # Also add Flathub user repo, but no user packages
 
