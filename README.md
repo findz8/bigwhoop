@@ -1,5 +1,4 @@
 # bigwhoop &nbsp; [![bluebuild build badge](https://github.com/findz8/bigwhoop/actions/workflows/build.yml/badge.svg)](https://github.com/findz8/bigwhoop/actions/workflows/build.yml)
-# bigwhoop nvidia &nbsp; [![bluebuild build badge](https://github.com/findz8/bigwhoop/actions/workflows/build-nvidia.yml/badge.svg)](https://github.com/findz8/bigwhoop/actions/workflows/build-nvidia.yml)
 
 This is a custom image of Silverblue which also has a nvidia version which matches the main build
 
@@ -29,6 +28,7 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
 
+# bigwhoop nvidia &nbsp; [![bluebuild build badge](https://github.com/findz8/bigwhoop/actions/workflows/build-nvidia.yml/badge.svg)](https://github.com/findz8/bigwhoop/actions/workflows/build-nvidia.yml)
 ## Installation for nvidia GPU
 
 > [!WARNING]  
