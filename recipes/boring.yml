@@ -11,26 +11,12 @@ image-version: 42 # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - type: files
-    files:
-      - source: system
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-      - source: wallpapers
-        destination: /usr/share/backgrounds
-
-  - type: dnf
-    install:
-      packages:
-        - distrobox
-    remove:
-      packages:
-        # example: removing firefox (in favor of the flatpak)
-        # "firefox" is the main package, "firefox-langpacks" is a dependency
-        - firefox
-        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-        - toolbox
-        - gnome-software
-
+  - from-file: recipes/files.yml
+  - from-file: recipes/boring-packages.yml
+  - from-file: recipes/gnome-flatpaks.yml
+  - from-file: recipes/gnome-extensions.yml
+  - from-file: recipes/gschema-overrides.yml
+ 
   - type: default-flatpaks
     configurations:
       - notify: false # Send notification after install/uninstall is finished (true/false)
@@ -39,39 +25,8 @@ modules:
         install: # system flatpaks we want all users to have and not remove
           - org.gnome.baobab
           - org.mozilla.firefox
-          - io.github.kolunmi.Bazaar
-          - org.gnome.Calendar
-          - org.gnome.Weather
-          - org.gnome.Loupe
-          - org.gnome.Papers
-          - org.gnome.TextEditor
-          - org.gnome.Calculator
-          - org.gnome.baobab
-          - org.gnome.Evolution
-          - org.gnome.Snapshot
-          - org.gnome.Contacts
-          - org.gnome.clocks
-          - org.gnome.Sudoku
-          - org.gnome.Chess
-          - org.gnome.Logs
-          - org.gnome.Maps
-          - org.fedoraproject.MediaWriter
-          - io.missioncenter.MissionCenter
           - com.mattjakeman.ExtensionManager
       - scope: user # Also add Flathub user repo, but no user packages
-
-  - type: gnome-extensions
-    install:
-      - Caffeine
-      - Blur my Shell 
-      - AppIndicator and KStatusNotifierItem Support
-      - Hot Edge
-      - 7065
-      - 4839 # clipboard history
-  
-  - type: gschema-overrides
-    include:
-      - zz1-wallpaper.gschema.override 
 
   - type: os-release
     properties:

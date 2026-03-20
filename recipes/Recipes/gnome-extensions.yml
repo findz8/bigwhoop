@@ -1,0 +1,8 @@
+type: gnome-extensions
+install:
+  - Caffeine
+  - Blur my Shell 
+  - AppIndicator and KStatusNotifierItem Support
+  - Hot Edge
+  - 7065
+  - 4839 # clipboard history
