@@ -16,11 +16,10 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
-
-  - type: systemd
-    # this example disables automatic flatpak updates and enables a custom service unit for all users
-    system:
-      enabled:
-        - docker.service
+  - type: os-release
+    properties:
+      ID: bigwhoop
+      NAME: BigWhoop
+      PRETTY_NAME: BigWhoop Image
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
