@@ -1,5 +1,5 @@
 # bigwhoop &nbsp; [![bluebuild build badge](https://github.com/findz8/bigwhoop/actions/workflows/build.yml/badge.svg)](https://github.com/findz8/bigwhoop/actions/workflows/build.yml)
-# bigwhoop nvidia &nbsp; [![bluebuild build badge](https://github.com/findz8/bigwhoop/actions/workflows/build.yml/badge.svg)](https://github.com/findz8/bigwhoop/actions/workflows/build-nvidia.yml)
+# bigwhoop nvidia &nbsp; [![bluebuild build badge](https://github.com/findz8/bigwhoop/actions/workflows/build-nvidia.yml/badge.svg)](https://github.com/findz8/bigwhoop/actions/workflows/build-nvidia.yml)
 
 This is a custom image of Silverblue which also has a nvidia version which matches the main build
 
