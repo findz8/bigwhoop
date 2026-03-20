@@ -58,7 +58,7 @@ modules:
       - Blur my Shell 
       - AppIndicator and KStatusNotifierItem Support
       - Hot Edge
-      - Tiling Shell
+      - 7065
   
   - type: gschema-overrides
     include:
