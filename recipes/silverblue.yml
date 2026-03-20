@@ -23,6 +23,7 @@ modules:
         - lutris
         - gamescope
         - mangohud
+        - gnome-tweaks
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
