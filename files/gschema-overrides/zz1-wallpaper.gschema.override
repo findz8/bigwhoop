@@ -2,3 +2,6 @@
 picture-uri='file:///usr/share/backgrounds/guybrush.png'
 picture-uri-dark='file:///usr/share/backgrounds/guybrush.png'
 picture-options='zoom'
+
+[org.gnome.desktop.wm.preferences]
+button-layout='appmenu:minimize,maximize,close'
