@@ -1,17 +1,18 @@
 type: dnf
-repos:
-  nonfree: rpmfusion
 group-install:
   skip-broken: true
-  exclude: 
+  exclude:
     - PackageKit-gstreamer-plugin
   packages:
     - multimedia
 replace:
-  - from-repo: rpmfusion
-    allow-erasing: true 
+  - from-repo: rpmfusion-free
+    allow-erasing: true
     packages:
       - old: ffmpeg-free
-        new: ffmpeg 
+        new: ffmpeg
+  - from-repo: rpmfusion-nonfree
+    allow-erasing: true
+    packages:
       - old: mesa-va-drivers
         new: mesa-va-drivers-freeworld
