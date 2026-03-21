@@ -44,6 +44,9 @@ modules:
           - org.freedesktop.Platform.ffmpeg-full
           - com.github.tchx84.Flatseal
           - io.github.kolunmi.Bazaar
+          - com.vysp3r.ProtonPlus
+          - com.discordapp.Discord
+          - com.heroicgameslauncher.hgl
       - scope: user # Also add Flathub user repo, but no user packages
 
   - type: os-release
