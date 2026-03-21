@@ -5,14 +5,6 @@ group-install:
     - PackageKit-gstreamer-plugin
   packages:
     - multimedia
-replace:
-  - from-repo: rpmfusion-free
-    allow-erasing: true
-    packages:
-      - old: ffmpeg-free
-        new: ffmpeg
-  - from-repo: rpmfusion-nonfree
-    allow-erasing: true
-    packages:
-      - old: mesa-va-drivers
-        new: mesa-va-drivers-freeworld
+install:
+  packages:
+    - libavcodec-freeworld
