@@ -4,7 +4,6 @@ configurations:
     scope: system
     # If no repo information is specified, Flathub will be used by default
     install: # system flatpaks we want all users to have and not remove
-        - io.github.kolunmi.Bazaar
         - org.gnome.Calendar
         - org.gnome.Weather
         - org.gnome.Loupe

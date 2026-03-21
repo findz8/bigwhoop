@@ -1,0 +1,18 @@
+type: dnf
+install:
+  packages:
+    - steam
+    - lutris
+    - gamescope
+    - mangohud
+
+type: default-flatpaks
+configurations:
+  - notify: false # Send notification after install/uninstall is finished (true/false)
+    scope: system
+    # If no repo information is specified, Flathub will be used by default
+    install: # system flatpaks we want all users to have and not remove
+      - com.vysp3r.ProtonPlus
+      - com.discordapp.Discord
+      - com.heroicgameslauncher.hgl
+  - scope: user # Also add Flathub user repo, but no user packages

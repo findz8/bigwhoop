@@ -11,66 +11,14 @@ image-version: 43 # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - type: files
-    files:
-      - source: system
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-      - source: wallpapers
-        destination: /usr/share/backgrounds
-
-  - type: dnf
-    install:
-      packages:
-        - steam
-        - lutris
-        - gamescope
-        - mangohud
-        - gnome-tweaks
-    remove:
-      packages:
-        # example: removing firefox (in favor of the flatpak)
-        # "firefox" is the main package, "firefox-langpacks" is a dependency
-        - firefox
-        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
-        - toolbox
-        - htop
-        - nvtop
-
-  - type: default-flatpaks
-    configurations:
-      - notify: false # Send notification after install/uninstall is finished (true/false)
-        scope: system
-        # If no repo information is specified, Flathub will be used by default
-        install: # system flatpaks we want all users to have and not remove
-          - org.gnome.baobab
-          - org.mozilla.firefox
-          - io.github.kolunmi.Bazaar
-          - org.gnome.Calendar
-          - org.gnome.Weather
-          - org.gnome.Loupe
-          - org.gnome.Papers
-          - org.gnome.TextEditor
-          - org.gnome.Calculator
-          - org.gnome.baobab
-          - org.gnome.Evolution
-          - com.mattjakeman.ExtensionManager
-          - com.vysp3r.ProtonPlus
-          - com.discordapp.Discord
-          - com.heroicgameslauncher.hgl
-      - scope: user # Also add Flathub user repo, but no user packages
-
-  - type: gnome-extensions
-    install:
-      - Caffeine
-      - Blur my Shell 
-      - AppIndicator and KStatusNotifierItem Support
-      - Hot Edge
-      - 7065
-      - 4839 # clipboard history
-  
-  - type: gschema-overrides
-    include:
-      - zz1-wallpaper.gschema.override 
+modules:
+  - from-file: yamls/files.yml
+  - from-file: yamls/boring-packages.yml
+  - from-file: yamls/gnome-flatpaks.yml
+  - from-file: yamls/gnome-extensions.yml
+  - from-file: yamls/gschema-overrides.yml
+  - from-file: yamls/boring-flatpaks.yml
+  - from-file: yamls/gaming-changes.yml
 
   - type: os-release
     properties:

@@ -16,18 +16,7 @@ modules:
   - from-file: yamls/gnome-flatpaks.yml
   - from-file: yamls/gnome-extensions.yml
   - from-file: yamls/gschema-overrides.yml
- 
-  - type: default-flatpaks
-    configurations:
-      - notify: false # Send notification after install/uninstall is finished (true/false)
-        scope: system
-        # If no repo information is specified, Flathub will be used by default
-        install: # system flatpaks we want all users to have and not remove
-          - org.gnome.baobab
-          - org.mozilla.firefox
-          - com.mattjakeman.ExtensionManager
-          - org.freedesktop.Platform.ffmpeg-full
-      - scope: user # Also add Flathub user repo, but no user packages
+  - from-file: yamls/boring-flatpaks.yml
 
   - type: os-release
     properties:
